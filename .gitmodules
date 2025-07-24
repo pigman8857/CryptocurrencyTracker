@@ -1,0 +1,6 @@
+[submodule "CryptocurrencyTrackerWeb"]
+	path = CryptocurrencyTrackerWeb
+	url = https://github.com/pigman8857/CryptocurrencyTrackerWeb
+[submodule "CryptocurrencyTrackerAPI"]
+	path = CryptocurrencyTrackerAPI
+	url = https://github.com/pigman8857/CryptocurrencyTrackerAPI
