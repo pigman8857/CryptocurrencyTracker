@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  web:
+    image: crypto-track-web:ver1
+    build:
+      context: ./CryptocurrencyTrackerWeb
+      dockerfile: dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+  api:
+    image: crypto-track-api:ver1
+    build:
+      context: ./CryptocurrencyTrackerAPI
+      dockerfile: dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3001:3001
