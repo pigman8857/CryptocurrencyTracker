@@ -1,0 +1,20 @@
+{
+  "name": "cryptocurrencytracker",
+  "version": "1.0.0",
+  "description": "This is the **main orchestrator module** for the Cryptocurrency Portfolio Tracker project. It pulls together two core submodules:",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd CryptocurrencyTrackerWeb && npm install && cd .. && cd CryptocurrencyTrackerAPI && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pigman8857/CryptocurrencyTracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pigman8857/CryptocurrencyTracker/issues"
+  },
+  "homepage": "https://github.com/pigman8857/CryptocurrencyTracker#readme"
+}
