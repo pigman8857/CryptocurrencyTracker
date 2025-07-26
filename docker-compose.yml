@@ -3,6 +3,7 @@ version: '3.4'
 services:
   web:
     image: crypto-track-web:ver1
+    container_name: crypto_web
     build:
       context: ./CryptocurrencyTrackerWeb
       dockerfile: dockerfile
@@ -11,11 +12,21 @@ services:
     ports:
       - 3000:3000
   api:
-    image: crypto-track-api:ver1
+    image: crypto-track-api:dev
+    container_name: crypto_api
     build:
       context: ./CryptocurrencyTrackerAPI
       dockerfile: dockerfile
     environment:
       NODE_ENV: development
+    depends_on:
+      - mysql
     ports:
       - 3001:3001
+  mysql:
+    image: mysql
+    container_name: crypto_db
+    env_file:
+      - .env.development
+    ports:
+      - '3306:3306'
