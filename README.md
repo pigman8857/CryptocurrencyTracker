@@ -112,3 +112,17 @@ $ npm run db:dev:migrate
 $ npm run db:dev:revert
 
 ```
+
+#### Unit Test
+
+30 July 2025 - We still have no unit test for Web and any e2e test.
+
+```bash
+
+# To Unit API module unit test
+$ npm run api:test
+
+# To Unit API module unit test with coverage
+$ npm run api:test:cov
+
+```

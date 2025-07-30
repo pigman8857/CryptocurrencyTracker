@@ -10,7 +10,9 @@
     "compose:up" : "docker compose up -d",
     "compose:down": "docker compose down -d",
     "db:dev:migrate" : "cd CryptocurrencyTrackerAPI && NODE_ENV=development npm run migrate:up",
-    "db:dev:revert" : "cd CryptocurrencyTrackerAPI && NODE_ENV=development npm run migrate:down"
+    "db:dev:revert" : "cd CryptocurrencyTrackerAPI && NODE_ENV=development npm run migrate:down",
+    "api:test": "cd CryptocurrencyTrackerAPI && npm run test",
+    "api:test:cov": "cd CryptocurrencyTrackerAPI && npm run test:cov"
   },
   "repository": {
     "type": "git",
