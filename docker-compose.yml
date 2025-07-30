@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   web:
-    image: crypto-track-web:ver1
+    image: crypto-track-web:dev
     container_name: crypto_web
     build:
       context: ./CryptocurrencyTrackerWeb
@@ -11,6 +11,8 @@ services:
       NODE_ENV: development
     ports:
       - 3000:3000
+    networks:
+      - crypto_net
   api:
     image: crypto-track-api:dev
     container_name: crypto_api
@@ -23,6 +25,8 @@ services:
       - mysql
     ports:
       - 3001:3001
+    networks:
+      - crypto_net
   mysql:
     image: mysql
     container_name: crypto_db
@@ -32,5 +36,9 @@ services:
       - mysql_data:/var/lib/mysql
     ports:
       - '3306:3306'
+    networks:
+      - crypto_net
 volumes:
   mysql_data:
+networks:
+  crypto_net:
