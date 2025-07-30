@@ -8,7 +8,7 @@
     "start:dev:all": "cd CryptocurrencyTrackerWeb && npm run dev && cd .. & cd CryptocurrencyTrackerAPI && npm run start:dev",
     "build:dev:images" : "cd CryptocurrencyTrackerWeb && npm run build:dev:image && cd .. && cd CryptocurrencyTrackerAPI && npm run build:dev:image",
     "compose:up" : "docker compose up -d",
-    "compose:down": "docker compose down -d",
+    "compose:down": "docker compose down",
     "db:dev:migrate" : "cd CryptocurrencyTrackerAPI && NODE_ENV=development npm run migrate:up",
     "db:dev:revert" : "cd CryptocurrencyTrackerAPI && NODE_ENV=development npm run migrate:down",
     "api:test": "cd CryptocurrencyTrackerAPI && npm run test",
