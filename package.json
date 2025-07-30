@@ -4,8 +4,13 @@
   "description": "This is the **main orchestrator module** for the Cryptocurrency Portfolio Tracker project. It pulls together two core submodules:",
   "main": "index.js",
   "scripts": {
-    "install": "cd CryptocurrencyTrackerWeb && npm install && cd .. && cd CryptocurrencyTrackerAPI && npm install",
-    "build:images:dev" : "cd CryptocurrencyTrackerWeb && npm run build:image && cd .. && cd CryptocurrencyTrackerAPI && npm run build:image:dev"
+    "sub:install": "cd CryptocurrencyTrackerWeb && npm install && cd .. && cd CryptocurrencyTrackerAPI && npm install",
+    "start:dev:all": "cd CryptocurrencyTrackerWeb && npm run dev && cd .. & cd CryptocurrencyTrackerAPI && npm run start:dev",
+    "build:dev:images" : "cd CryptocurrencyTrackerWeb && npm run build:dev:image && cd .. && cd CryptocurrencyTrackerAPI && npm run build:dev:image",
+    "compose:up" : "docker compose up -d",
+    "compose:down": "docker compose down -d",
+    "db:dev:migrate" : "cd CryptocurrencyTrackerAPI && NODE_ENV=development npm run migrate:up",
+    "db:dev:revert" : "cd CryptocurrencyTrackerAPI && NODE_ENV=development npm run migrate:down"
   },
   "repository": {
     "type": "git",
